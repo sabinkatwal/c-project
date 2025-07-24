@@ -1,4 +1,4 @@
-// Bird.hpp
+// src/Bird.hpp
 #ifndef BIRD_HPP
 #define BIRD_HPP
 
@@ -18,7 +18,9 @@ public:
     bool isFlying() const;
 
 private:
-    sf::CircleShape shape;
+    sf::Texture texture;
+    sf::Sprite sprite;
+    sf::CircleShape shape; // Keep for collision
     sf::Vector2f velocity;
     bool flying;
     sf::Vector2f initialPosition; // To reset the bird
